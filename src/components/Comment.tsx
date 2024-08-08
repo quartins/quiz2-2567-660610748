@@ -32,11 +32,13 @@ export default function Comment({
             <br />
             <span style={{ color: "#E4E6EB" }}>{commentText}</span>
 
-            {likeNum > 0 && <div className="d-flex align-items-center gap-1">
+            {likeNum > 0 && (<div className="d-flex align-items-center gap-1">
               <img src="/like.svg" width={20}></img>
               <span style={{ color: "#B0B3B8" }}>{likeNum} คน</span>
-            </div>}
+            </div>)
+            }
           </div>
+
           {replies && replies.map((reply) => (
           <Reply
           userImagePath={reply.userImagePath}
